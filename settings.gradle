@@ -1,0 +1,8 @@
+rootProject.name = 'pizza-order'
+include 'software-svc-pizza-order'
+include 'software-lib-pizza-order'
+include 'software-svc-pizza-order:software-lib-pizza-order'
+findProject(':software-svc-pizza-order:software-lib-pizza-order')?.name = 'software-lib-pizza-order'
+include 'software-svc-pizza-order:software-rest-pizza-order'
+findProject(':software-svc-pizza-order:software-rest-pizza-order')?.name = 'software-rest-pizza-order'
+
